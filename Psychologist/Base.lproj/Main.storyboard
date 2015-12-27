@@ -75,15 +75,25 @@
                                     <segue destination="D0Y-QP-Mn4" kind="showDetail" identifier="show no emotion" id="gPY-SF-btT"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EIN-g7-e9C">
+                                <rect key="frame" x="271" y="377" width="59" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Nothing!"/>
+                                <connections>
+                                    <action selector="nothing:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uje-QD-8AF"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="2Nj-Ps-6kT" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="4xr-fP-KnL"/>
+                            <constraint firstItem="EIN-g7-e9C" firstAttribute="centerX" secondItem="EpK-DZ-hlC" secondAttribute="centerX" id="Ay5-ti-RVm"/>
                             <constraint firstItem="TsU-3w-nLD" firstAttribute="centerX" secondItem="2Nj-Ps-6kT" secondAttribute="centerX" id="FmR-iH-guR"/>
                             <constraint firstItem="2Nj-Ps-6kT" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="J9O-YZ-9qu"/>
                             <constraint firstItem="TsU-3w-nLD" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="JOO-VS-8JU"/>
                             <constraint firstItem="cP8-Ma-4j1" firstAttribute="centerX" secondItem="TsU-3w-nLD" secondAttribute="centerX" id="RVt-Dx-0MC"/>
+                            <constraint firstItem="EIN-g7-e9C" firstAttribute="top" secondItem="EpK-DZ-hlC" secondAttribute="bottom" constant="8" symbolic="YES" id="SgK-cx-Fx7"/>
                             <constraint firstItem="2Nj-Ps-6kT" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="Z2j-AY-kDt"/>
                             <constraint firstItem="EpK-DZ-hlC" firstAttribute="centerX" secondItem="cP8-Ma-4j1" secondAttribute="centerX" id="hIW-tk-UxP"/>
                             <constraint firstItem="TsU-3w-nLD" firstAttribute="top" secondItem="cP8-Ma-4j1" secondAttribute="bottom" constant="8" symbolic="YES" id="iok-aa-A1D"/>
@@ -101,6 +111,9 @@
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" title="Psychologist" id="Cuv-gx-Ap8"/>
+                    <connections>
+                        <segue destination="D0Y-QP-Mn4" kind="showDetail" identifier="nothing" id="Q1o-q2-Qox"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -162,7 +175,15 @@
                             <constraint firstItem="V8X-NH-I2k" firstAttribute="leading" secondItem="Idf-HX-p93" secondAttribute="leading" id="w48-jm-i2G"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="m4V-ke-doq"/>
+                    <navigationItem key="navigationItem" id="m4V-ke-doq">
+                        <barButtonItem key="rightBarButtonItem" title="History" id="0ZX-1v-5xr">
+                            <connections>
+                                <segue destination="xtl-ys-yzL" kind="popoverPresentation" identifier="Show Diagnostic History" popoverAnchorBarButtonItem="0ZX-1v-5xr" id="pKg-wm-kmg">
+                                    <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                </segue>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="faceView" destination="THz-t9-wJR" id="5jF-j1-VaB"/>
                     </connections>
@@ -175,6 +196,43 @@
                 </panGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1765" y="200"/>
+        </scene>
+        <!--Text View Controller-->
+        <scene sceneID="TXa-Dx-t2s">
+            <objects>
+                <viewController id="xtl-ys-yzL" customClass="TextViewController" customModule="Psychologist" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="xyg-Ud-tEO"/>
+                        <viewControllerLayoutGuide type="bottom" id="zLx-3d-6xJ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="PJf-A7-gCI">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="qcl-4D-yS4">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <animations/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="qcl-4D-yS4" secondAttribute="trailing" id="Zm2-OB-Lf3"/>
+                            <constraint firstItem="qcl-4D-yS4" firstAttribute="bottom" secondItem="zLx-3d-6xJ" secondAttribute="top" id="bFf-u7-E9d"/>
+                            <constraint firstItem="qcl-4D-yS4" firstAttribute="leading" secondItem="PJf-A7-gCI" secondAttribute="leading" id="ePD-SX-tWw"/>
+                            <constraint firstItem="qcl-4D-yS4" firstAttribute="top" secondItem="PJf-A7-gCI" secondAttribute="top" id="mpM-Im-k45"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="textView" destination="qcl-4D-yS4" id="Z9r-4b-eXh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XYZ-UG-6xp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2481" y="186"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="bdz-54-V4X">
@@ -212,10 +270,10 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MXl-ns-MuQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="953" y="200"/>
+            <point key="canvasLocation" x="980" y="318"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="ypt-Zg-KDP"/>
+        <segue reference="Q1o-q2-Qox"/>
     </inferredMetricsTieBreakers>
 </document>

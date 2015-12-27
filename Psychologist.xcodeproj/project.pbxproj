@@ -16,6 +16,7 @@
 		F8B4194A1C2F7E0000C76BD3 /* PsychologistUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B419491C2F7E0000C76BD3 /* PsychologistUITests.swift */; };
 		F8DC1BFA1C2F8368008920A9 /* FaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8DC1BF81C2F8368008920A9 /* FaceView.swift */; settings = {ASSET_TAGS = (); }; };
 		F8DC1BFB1C2F8368008920A9 /* HappinessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8DC1BF91C2F8368008920A9 /* HappinessViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		F8DC1BFD1C2F948D008920A9 /* TextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8DC1BFC1C2F948D008920A9 /* TextViewController.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		F8B4194B1C2F7E0000C76BD3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F8DC1BF81C2F8368008920A9 /* FaceView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FaceView.swift; sourceTree = "<group>"; };
 		F8DC1BF91C2F8368008920A9 /* HappinessViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HappinessViewController.swift; sourceTree = "<group>"; };
+		F8DC1BFC1C2F948D008920A9 /* TextViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,7 @@
 		F8B4191D1C2F7DFF00C76BD3 = {
 			isa = PBXGroup;
 			children = (
+				F8DC1BFC1C2F948D008920A9 /* TextViewController.swift */,
 				F8B419281C2F7E0000C76BD3 /* Psychologist */,
 				F8B4193D1C2F7E0000C76BD3 /* PsychologistTests */,
 				F8B419481C2F7E0000C76BD3 /* PsychologistUITests */,
@@ -269,6 +272,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F8DC1BFD1C2F948D008920A9 /* TextViewController.swift in Sources */,
 				F8B4192C1C2F7E0000C76BD3 /* PsychologistViewController.swift in Sources */,
 				F8B4192A1C2F7E0000C76BD3 /* AppDelegate.swift in Sources */,
 				F8DC1BFB1C2F8368008920A9 /* HappinessViewController.swift in Sources */,

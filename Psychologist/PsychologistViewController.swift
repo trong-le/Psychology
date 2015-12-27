@@ -10,6 +10,11 @@ import UIKit
 
 class PsychologistViewController: UIViewController {
 
+    
+    @IBAction func nothing(sender: UIButton) {
+        performSegueWithIdentifier("nothing", sender: nil)
+    }
+    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
         /* If view controller is HappinessViewController then below statement happens
