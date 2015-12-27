@@ -36,7 +36,6 @@ class HappinessViewController: UIViewController, FaceViewDataSource
         }
     }
     
-    
     var happiness: Int = 100 { // 0 = very sad, 100 = ecstatic
         didSet {
             happiness = min(max(happiness, 0), 100)
@@ -45,8 +44,9 @@ class HappinessViewController: UIViewController, FaceViewDataSource
         }
     }
     
+    // if faceview is nil, ignore setNeedsDisplay, otherwise update display
     func updateUI() {
-        faceView.setNeedsDisplay()
+        faceView?.setNeedsDisplay()
     }
     
     func smilinessForFaceView(sender: FaceView) -> Double? {
