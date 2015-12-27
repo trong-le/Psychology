@@ -23,7 +23,7 @@ class TextViewController: UIViewController
         }
     }
     
-    // Update size of 
+    // Update size of popover
     override var preferredContentSize: CGSize {
         get {
             if textView != nil && presentingViewController != nil {
