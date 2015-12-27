@@ -47,6 +47,7 @@ class HappinessViewController: UIViewController, FaceViewDataSource
     // if faceview is nil, ignore setNeedsDisplay, otherwise update display
     func updateUI() {
         faceView?.setNeedsDisplay()
+        title = "\(happiness)"
     }
     
     func smilinessForFaceView(sender: FaceView) -> Double? {

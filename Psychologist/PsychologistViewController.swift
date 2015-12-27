@@ -14,7 +14,12 @@ class PsychologistViewController: UIViewController {
         
         /* If view controller is HappinessViewController then below statement happens
            Otherwise nil and nothing happens unless stated */
-        if let hvc = segue.destinationViewController as? HappinessViewController {
+        var destination = segue.destinationViewController as? UIViewController
+        if let navCon = destination as? UINavigationController {
+            destination = navCon.visibleViewController
+        }
+        
+        if let hvc = destination as? HappinessViewController {
             if let identifier = segue.identifier {
                 switch identifier {
                     case "show sad": hvc.happiness = 0
